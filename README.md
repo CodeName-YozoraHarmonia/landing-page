@@ -2,7 +2,7 @@
 
 **Digimon Dock** es una landing page desarrollada con [Astro](https://astro.build/) que presenta una propuesta ficticia de una herramienta para capturar, entrenar y evolucionar Digimon. Este proyecto forma parte de mi portfolio como desarrollador web y combina diseño, optimización SEO y componentes reutilizables.
 
-> 👤 Desarrollado por **Andrés "Yozora"**
+> 👤 Desarrollado por [**Andrés (Yozora)**](https://github.com/CodeName-YozoraHarmonia)
 
 ---
 
@@ -24,6 +24,13 @@ El proyecto simula un dispositivo tecnológico ficticio para interactuar con cri
 ---
 
 ## 📝 Notas de versión
+
+### 🔧 Versión 0.1.1 — HotFix al index
+
+**Fecha:** 19/07/2025  
+**Estado:** Estable  
+**Descripción:**  
+Se incluye la sección "¿Qué es el Digimon Dock?" que por error faltó en la versión base.
 
 ### 📦 Versión 0.1.0 — Maqueta inicial
 
