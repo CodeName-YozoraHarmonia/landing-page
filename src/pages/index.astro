@@ -1,0 +1,150 @@
+---
+import Layout from "../layouts/layout.astro";
+import ImageSwitcher from "../components/image-switcher.astro";
+
+const hatch = [
+  "/digimon-windows/digitama.exe.png",
+  "/digimon-windows/agumon.exe.png",
+];
+
+const evolution = [
+  "/digimon-windows/agumon.exe.png",
+  "/digimon-windows/greymon.exe.png",
+];
+---
+
+<Layout title="Digimon Dock">
+  <!-- Hero Section -->
+  <section
+    class="relative min-h-screen flex items-center justify-center overflow-hidden"
+  >
+    <img
+      src="/digimon-dock/digimon-dock-novel.jpg"
+      alt="digimon-dock"
+      class="absolute inset-0 w-full h-full object-cover z-0 brightness-50"
+    />
+    <div class="relative z-10 text-center px-4">
+      <h1
+        class="text-4xl md:text-6xl font-extrabold leading-tight"
+      >
+        Digimon Dock
+      </h1>
+      <span
+        class="text-lg md:text-2xl mt-2 block font-medium"
+      >
+        Entrena, cria y evoluciona a tu compañero Digimon.
+      </span>
+      <button
+        type="button"
+        class="mt-6 bg-[#8A2BE2] hover:bg-[#B026FF] text-white text-lg font-semibold rounded-md px-6 py-3 transition-all duration-300"
+      >
+        ¡Comenzar!
+      </button>
+    </div>
+  </section>
+
+  <!-- Digimon Programs -->
+  <section
+    class="flex flex-col md:flex-row-reverse p-2 md:min-h-screen items-center overflow-hidden"
+    id="digimon-programs"
+  >
+    <div class="w-full md:w-1/2 md:mx-4">
+      <img src="/digimon-windows/agumon.exe.png" alt="programa-digimon" />
+    </div>
+
+    <div
+      class="p-4 md:w-1/2 text-left md:text-right md:mx-4 h-max"
+      data-aos="fade-right"
+    >
+      <h2 class="text-3xl md:text-5xl font-bold leading-tight mb-4">
+        ¿Qué es un Digimon?
+      </h2>
+      <p class="text-base md:text-lg leading-relaxed font-normal">
+        Los Programas Digimon (abreviación de Digital Monsters) son entidades
+        digitales descubiertas en la red informática en 1997. Compuestas por
+        bits y fragmentos de información, estas misteriosas formas de vida
+        poseen la capacidad de interactuar con entornos digitales, e incluso
+        alterarlos. En lo más profundo de su núcleo llevan inscrito un instinto
+        básico de combate, que no solo funciona como su medio de comunicación y
+        entendimiento, sino también como la clave para su desarrollo y
+        evolución.
+      </p>
+    </div>
+  </section>
+
+  <!-- Digimon Dock Functions -->
+  <section
+    class="p-2 md:min-h-screen flex flex-col overflow-hidden mb-24"
+    id="functions"
+  >
+    <h2
+      class="text-3xl md:text-5xl font-bold leading-tight text-center mb-4 md:mb-6"
+      data-aos="fade"
+    >
+      Funciones<br class="md:hidden" /> del Digimon Dock
+    </h2>
+
+    <div class="flex flex-col gap-8 md:gap-12">
+      <!-- Digimon Capture -->
+      <div
+        class="flex flex-col md:flex-row-reverse items-center overflow-hidden"
+      >
+        <div class="p-4 md:w-1/2 h-max text-left md:mx-4" data-aos="fade-left">
+          <h3 class="text-2xl md:text-3xl font-semibold mb-2">
+            Digimon Capture
+          </h3>
+          <p class="text-base md:text-lg leading-relaxed font-normal">
+            Mediante el sistema Digimon Capture, es posible registrar datos al
+            interactuar o combatir con un Digimon. Esta recolección de
+            información digital permite estudiar su estructura y, eventualmente,
+            habilita su crianza.
+          </p>
+        </div>
+        <div class="md:w-1/2 md:mx-4">
+          <img
+            src="/digimon-windows/agumon(scan).exe.png"
+            alt="programa-digimon"
+          />
+        </div>
+      </div>
+
+      <!-- Digimon Convert -->
+      <div class="flex flex-col md:flex-row items-center overflow-hidden">
+        <div
+          class="p-4 md:w-1/2 h-max text-left md:text-right md:mx-4"
+          data-aos="fade-right"
+        >
+          <h3 class="text-2xl md:text-3xl font-semibold mb-2">
+            Digimon Convert
+          </h3>
+          <p class="text-base md:text-lg leading-relaxed font-normal">
+            Una vez alcanzado el 100% de los datos de una especie, es posible
+            sintetizar un Digitama que, al eclosionar, genera un ejemplar
+            completo del Digimon analizado.
+          </p>
+        </div>
+        <div class="md:w-1/2 md:mx-4">
+          <ImageSwitcher images={hatch} interval={3} id="0" />
+        </div>
+      </div>
+
+      <!-- Evolution -->
+      <div
+        class="flex flex-col md:flex-row-reverse items-center overflow-hidden"
+      >
+        <div class="p-4 md:w-1/2 h-max text-left md:mx-4" data-aos="fade-left">
+          <h3 class="text-2xl md:text-3xl font-semibold mb-2">Evolution</h3>
+          <p class="text-base md:text-lg leading-relaxed font-normal">
+            Al cumplir ciertas condiciones, un Digimon puede evolucionar a un
+            nivel superior. Este proceso no solo incrementa su poder y
+            capacidades, sino que también abre nuevas posibilidades de
+            desarrollo y adaptación dentro del entorno digital.
+          </p>
+        </div>
+        <div class="md:w-1/2 md:mx-4">
+          <ImageSwitcher images={evolution} interval={3} id="1" />
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

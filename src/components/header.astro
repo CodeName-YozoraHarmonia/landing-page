@@ -1,0 +1,45 @@
+---
+const links = [
+  { name: "Digimon Dock", href: "#digimon-dock" },
+  { name: "Programas Digimon", href: "#digimon-programs" },
+  { name: "Funciones", href: "#functions" },
+];
+---
+
+<header class="fixed top-0 left-0 w-full z-50 p-4 border-b border-[#333] shadow-inner shadow-[#1c1c1c80] bg-[#0F0F0F] text-white">
+  <!-- Menú principal de navegación -->
+  <nav class="flex justify-between items-center" aria-label="Menú principal">
+    
+    <!-- Logo de la página -->
+    <div>
+        <img src="/logo.png" alt="Logo de Digimon Dock" />
+    </div>
+
+    <!-- Enlaces de navegación y botón -->
+    <div class="flex items-center gap-4">
+      
+      <!-- Lista de enlaces de navegación -->
+      <ul class="hidden md:flex gap-4">
+        <!-- Iteramos sobre el array de enlaces 'links' utilizando la sintaxis de Astro -->
+        {links.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class="hover:text-[#B026FF] transition-colors duration-200"
+            >
+              {link.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <!-- Botón de acción: Comprar -->
+      <button
+        aria-label="Comprar Digimon Dock"
+        class="bg-[#8A2BE2] hover:bg-[#B026FF] text-base font-medium rounded-md px-4 py-2 transition-all duration-200 hover:cursor-pointer"
+      >
+        Comprar
+      </button>
+    </div>
+  </nav>
+</header>

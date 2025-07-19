@@ -1,0 +1,18 @@
+---
+const { images = [], interval = 5, id } = Astro.props;
+---
+
+<div
+  id={id}
+  class="relative w-full mx-auto overflow-hidden"
+  data-images={JSON.stringify(images)}
+  data-interval={interval}
+>
+  <img
+    src={images[0]}
+    alt="imagen"
+    class="switch-img w-full shadow-lg cursor-pointer"
+  />
+</div>
+
+<script src="/scripts/imageSwitcher.js" type="module"></script>
